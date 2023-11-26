@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: krumyantsev-sc
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: login
+                  value: "admin"
+              - column:
+                  name: password
+                  value: "$2a$10$ybMoZbH6uAddHocVIOHfae1YG3iQp7nVUeCGewLiSNJ2F9OWG9cBa" # admin
+              - column:
+                  name: email
+                  value: "admin@test.com"
+              - column:
+                  name: registration_date
+                  valueDate: "2023-07-17T18:30:00"
+              - column:
+                  name: role
+                  value: "ADMIN"

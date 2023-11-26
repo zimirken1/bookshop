@@ -1,0 +1,18 @@
+.user-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-bar-admin-container {
+  width: 92%;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pagination-admin-container {
+  margin-top: 20px;
+}

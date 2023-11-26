@@ -1,0 +1,57 @@
+databaseChangeLog:
+  - changeSet:
+      id: 14
+      author: krumyantsev-sc
+      changes:
+        - createTable:
+            tableName: cart
+            columns:
+              - column:
+                  name: cart_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    unique: true
+                    foreignKeyName: fk_cart_user
+                    references: users(id)
+
+  - changeSet:
+      id: 15
+      author: krumyantsev-sc
+      changes:
+        - createTable:
+            tableName: cart_item
+            columns:
+              - column:
+                  name: cart_item_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: cart_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_cart_item_cart
+                    references: cart(cart_id)
+              - column:
+                  name: book_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_cart_item_book
+                    references: book(id)
+              - column:
+                  name: quantity
+                  type: int
+                  constraints:
+                    nullable: false

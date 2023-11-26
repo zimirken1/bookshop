@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 9
+      author: krumyantsev-sc
+      changes:
+        - addColumn:
+            tableName: comment
+            columns:
+              - column:
+                  name: removed
+                  type: boolean
+                  defaultValue: false
+                  constraints:
+                    nullable: false

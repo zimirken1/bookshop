@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 16
+      author: krumyantsev-sc
+      changes:
+        - insert:
+            tableName: cart
+            columns:
+              - column:
+                  name: user_id
+                  valueComputed: "(SELECT id FROM users WHERE login = 'admin')"

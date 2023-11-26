@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: krumyantsev-sc
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            stripComments: false
+            sql: |
+              DO $$
+              BEGIN
+                  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'role') THEN
+                      CREATE TYPE role AS ENUM ('ADMIN', 'USER', 'GUEST', 'BANNED');
+                  END IF;
+              END
+              $$;
+        - sql: "CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";"
+  - changeSet:
+      id: 3
+      author: krumyantsev-sc
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: uuid
+                  type: uuid
+                  defaultValueComputed: uuid_generate_v4()
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: login
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: registration_date
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

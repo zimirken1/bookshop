@@ -1,0 +1,112 @@
+.book-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.card-desc-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 650px;
+    align-items: center;
+}
+
+.card-desc-container .card {
+    border: none;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    font-size: 23px;
+    margin-right: 100px;
+}
+
+.card-desc-container .card img {
+    width: 250px;
+    height: 300px;
+}
+
+.card-desc-container .card .desc-container {
+    width: 230px;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.desc {
+    background-color: wheat;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.book-page-desc-container {
+    height: 450px;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f7f5;
+    max-width: 400px;
+    border-radius: 10px;
+    min-height: 45px;
+    margin-bottom: 5px;
+    text-align: center;
+    overflow-wrap: break-word;
+
+}
+
+.comment-credentials {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-text {
+    width: 60%;
+}
+
+.comments-container {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.add-comment-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.comment-controls {
+    width: 10%;
+}
+
+.comment-controls svg {
+    cursor: pointer;
+}
+
+.comment-controls svg:hover {
+    color: deepskyblue;
+}
+
+.comment-container-wrapper {
+}
+
+.reply-container {
+    margin-left: 15px;
+}
+

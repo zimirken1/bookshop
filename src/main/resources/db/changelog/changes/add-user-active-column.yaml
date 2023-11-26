@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-user-active-column
+      author: krumyantsev-sc
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: false
+              - column:
+                  name: activation_code
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true

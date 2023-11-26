@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "scand.bookshop.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Description for scand.bookshop.jwtSecret."
+  }
+] }

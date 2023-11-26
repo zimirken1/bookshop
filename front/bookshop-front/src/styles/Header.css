@@ -1,0 +1,65 @@
+.header-container {
+    height: 100px;
+    background-color: deepskyblue;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    font-size: 56px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-name {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+.logo-container:hover, .menu-item-container:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+.menu-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.menu-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item-name {
+    margin-left: 5px;
+}
+
+.flag-container {
+    display: flex;
+}
+

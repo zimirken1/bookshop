@@ -1,0 +1,95 @@
+.detail-container {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    padding: 10px;
+}
+
+.order-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.total {
+    text-align: right;
+    margin-right: 15px;
+}
+
+.order-detail-image-container img {
+    width: 100px;
+    height: 150px;
+}
+
+.order-buttons-container {
+    width: 620px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.cancel-button, .pay-button {
+    width: 100px;
+    height: 30px;
+    background-color: darkseagreen;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancel-button {
+    background-color: indianred;
+    margin-right: 7px;
+}
+
+.cancel-button:hover {
+    background-color: orangered;
+}
+
+.pay-button:hover {
+    background-color: limegreen;
+}
+
+.pending {
+    color: orange;
+}
+
+.paid {
+    color: green;
+}
+
+.cancelled {
+    color: red;
+}
+
+.orders-history-container {
+    width: 630px;
+}
+
+.orders-history-container-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.orders-history-container .pagination {
+    margin-left: 35%;
+}
+
+.orders-history-container {
+    margin: 3%;
+}

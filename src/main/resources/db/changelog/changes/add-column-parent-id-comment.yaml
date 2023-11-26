@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 8
+      author: krumyantsev-sc
+      changes:
+        - addColumn:
+            tableName: comment
+            columns:
+              - column:
+                  name: parent_comment_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+                    foreignKeyName: fk_comment_parent
+                    references: comment(id)
